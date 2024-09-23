@@ -22,31 +22,55 @@
 </head>
 <body>
     
-    <header>
-        <nav class="gradient-bg p-4 flex items-center justify-between max-sm:flex-col max-sm:text-center max-sm:gap-4 fixed top-0 z-10 w-full">
+    <header class="flex gap-10"  >
+        <div class="fixed top-0 z-10">
+            <nav class="gradient-bg p-4 flex items-center justify-between max-sm:flex-col max-sm:text-center max-sm:gap-4 fixed top-0 z-10 w-full">
             
-            <span class="text-white flex justify-center gap-4 text-4xl font-bold mb-6 order-3 mr-10 max-sm:order-2 max-sm:mr-0"><img src="./images/coin.png" alt="Amount" title="current balance">5500 BDT</span>
-
-            <!-- <a href="./blog.html"><button class="btn btn-warning text-white text-2xl px-10 py-5 mb-6 ml-10 flex items-center justify-center max-sm:order-3 max-sm:ml-0"></button>
-                <span >Blog</span>
-            </button></a> -->
-
-            <a href="./blog.html"><button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg ml-10 text-white text-2xl bg-orange-500 max-sm:order-3 max-sm:h-12 max-sm:-translate-x-3 ">Blog</button></a>
-            
-
-
-            <h1 class="text-white gap-3 flex justify-center text-4xl font-semibold mb-6 order-2 max-sm:order-1"><img src="./images/logo.png" alt="">Donate Bangladesh</h1>
- 
+                <span class="text-white flex justify-center gap-4 text-4xl font-bold mb-6 order-3 mr-10 max-sm:order-2 max-sm:mr-0"><img src="./images/coin.png" alt="Amount" title="current balance">5500 BDT</span>
+    
+    
+                <a href="./blog.html"><button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg ml-10 text-white text-2xl bg-orange-500 max-sm:order-3 max-sm:h-12 max-sm:-translate-x-3 ">Blog</button></a>
+                
+    
+    
+                <h1 class="text-white gap-3 flex justify-center text-4xl font-semibold mb-6 order-2 max-sm:order-1"><img src="./images/logo.png" alt="">Donate Bangladesh</h1>
+    
+               
+     
+               
+            </nav>
+            <!-- <div class="flex justify-center items-center w-full mt-72 gradient-bg">
+                <button class="btn btn-outline btn-success w-64 border-orange-600 !text-orange-600" id="Donation">
+                  <span>Donation</span>
+                </button>
+                <button class="btn btn-outline btn-success w-64 border-orange-600 !text-orange-600 ml-4" id="History">
+                  <span>History</span>
+                </button>
+              </div>
+              
+            </div>
            
-        </nav>
-    </header>
-    <main class="pt-40 max-sm:pt-60">
-        <div class="flex justify-center mt-7 gap-5 mb-5 max-sm:flex-col max-sm:mr-4 max-sm:ml-4 max-sm:translate-x-24
-        
-        ">
-            <button class="btn btn-outline btn-success w-1/6  border-orange-600 max-sm:w-1/2" id="Donation"><span class="text-orange-600">Donation</span></button>
-            <button class="btn btn-outline btn-success w-1/6 border-orange-600 max-sm:w-1/2" id="History"><span class="text-orange-600">History</span></button>
+             -->
+            
+          
+              
+            
         </div>
+    </header>
+    <section class="gradient-bg w-full fixed top-0 z-10 mt-24 p-8 gap-7  max-lg:-translate-y-8 max-sm:mt-64">
+       <div class="lg:translate-x-96 max-sm:translate-x-8">
+        <button class=" max-sm:translate-x-4 btn btn-outline btn-success w-64 border-orange-600 !text-orange-600" id="Donation">
+            <span>Donation</span>
+          </button>
+          <button class=" max-sm:translate-y-5 btn btn-outline btn-success w-64 border-orange-600 !text-orange-600 ml-4" id="History">
+            <span>History</span>
+          </button>
+       </div>
+
+    </section>
+    
+    <main class="pt-72 max-sm:mt-44">
+       
 
         <hr class="mb-10">
 
@@ -67,12 +91,12 @@
     The recent floods in <em>Noakhali</em> have caused significant <br> damage to homes and infrastructure. Your donation will provide essential supplies <br> to those affected. Every contribution, big or small, makes a difference. <br> Please join us in supporting relief efforts and positively impacting the lives <br> of those in need.
                         </p>
                         <div class="flex gap-3 ">
-                            <input type="text"  placeholder="Write Donation Amount"
+                            <input type="text" id="N_input"  placeholder="Write Donation Amount"
                         class="input input-bordered input-warning w-full max-w-xs mt-6 " />
                         <img src="./images/logo.png" alt="donate" class="h-1/2 mt-5">
                         </div>
     
-                        <button class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
+                        <button id="donateButton1" class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
                         
                     </div>
                 </div>
@@ -92,12 +116,14 @@
     The recent floods in <em>Feni</em> have caused severe disruption and loss. <br> Your donation will provide essential aid, including food, water, and <br> medical supplies, to those affected. Together, we can support and <br> rebuild lives. Every contribution makes a difference—please consider donating today.
                         </p>
                         <div class="flex gap-3 ">
-                            <input type="text"  placeholder="Write Donation Amount"
+                            <input type="text" id="F_input"  placeholder="Write Donation Amount"
                         class="input input-bordered input-warning w-full max-w-xs mt-6 " />
                         <img src="./images/logo.png" alt="donate" class="h-1/2 mt-5">
                         </div>
     
-                        <button class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
+                        <button id="donateButton2" class="btn btn-wide w-100 mt-7 
+                        
+                        bg-orange-400 text-2xl font-light  text-white ">Donate Now</button>
                         
                     </div>
                 </div>
@@ -117,12 +143,25 @@
                             The <em>Quota movement</em> has caused injuries and hardship for many. <br> Your support is vital in providing medical care and supplies to <br> those affected. By donating, you help ensure injured individuals <br> receive the necessary assistance. Every contribution aids their recovery. <br> Please consider supporting these brave individuals in their time of need.
                         </p>
                         <div class="flex gap-3 ">
-                            <input type="text"  placeholder="Write Donation Amount"
+                            <input type="text" id="Q_input"  placeholder="Write Donation Amount"
                         class="input input-bordered input-warning w-full max-w-xs mt-6 " />
                         <img src="./images/logo.png" alt="donate" class="h-1/2 mt-5">
                         </div>
     
-                        <button class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
+                        <button  id="donateButton" class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
+                        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1"  class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
                         
                     </div>
                 </div>
@@ -131,6 +170,8 @@
 
 
         <div id="History-section">
+            <!-- Open the modal using ID.showModal() method -->
+
 
         </div>
 

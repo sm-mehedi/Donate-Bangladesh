@@ -29,3 +29,57 @@ document.getElementById('History').addEventListener('click', function() {
 window.onload = function() {
     document.getElementById('Donation').click();
 };
+
+
+function check_input_field(inputId) { // Reusable function created by the developer
+    const inputField = document.getElementById(inputId);
+    const value = inputField.value.trim(); 
+
+    const positiveNumber = /^[+]?(0|[1-9]\d*)(\.\d+)?$/;
+
+    if (value === '') {
+        alert('Please fill in the ' + inputField.placeholder + ' input box.');
+        return false; 
+    } else if (!positiveNumber.test(value)) {
+        alert('Please enter a valid amount.');
+        return false; 
+    }
+
+    return true; 
+}
+
+
+document.getElementById('donateButton1').addEventListener('click', function() {
+    const isNValid = check_input_field('N_input');
+   
+
+    
+    if (isNValid) {
+        alert('Thank you for your donations!');
+      
+    }
+});
+document.getElementById('donateButton2').addEventListener('click', function() {
+   
+     const isFValid = check_input_field('F_input');
+   
+
+    
+    if (isFValid) {
+        alert('Thank you for your donations!');
+      
+    }
+});
+const button = document.getElementById('my_modal_1');
+    button.disabled = true;
+document.getElementById('my_modal_1').addEventListener('click', function() {
+    
+     const isQValid = check_input_field('Q_input');
+
+    
+    if (isQValid) {
+        button.disabled = 'false';
+        document.getElementById('my_modal_1').showModal();
+       
+    }
+});
