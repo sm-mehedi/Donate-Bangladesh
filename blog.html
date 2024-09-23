@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+         body, html {
+            width: 100%;
+            overflow-x: hidden; 
+            
+}
+.gradient-bg {
+    background: linear-gradient(to right, rgba(255, 205, 158, 0.8), rgba(245, 153, 25, 0.8)); 
+    backdrop-filter: blur(10px);
+    }
+
+</style>
+</head>
+<body>
+    <header class="bg-slate-500 sticky top-0 z-10">
+        <nav class="gradient-bg p-4 flex items-center justify-between max-sm:flex-col max-sm:text-center max-sm:gap-4 fixed top-0 z-10 w-full">
+            
+            <span class="text-white flex justify-center gap-4 text-4xl font-bold mb-6 order-3 mr-10 max-sm:order-2 max-sm:mr-0">
+                <img src="./images/coin.png" alt="Amount" title="current balance">5500 BDT
+            </span>
+    
+            <a href="./index.html">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg ml-10 text-white text-2xl bg-lime-600 max-sm:order-3 max-sm:h-12">Home</button>
+            </a>
+    
+            <h1 class="text-white gap-3 flex justify-center text-4xl font-semibold mb-6 order-2 max-sm:order-1">
+                <img src="./images/logo.png" alt="">Donate Bangladesh
+            </h1>
+        </nav>
+    </header>
+    
+    
+   <main class="pt-40 max-sm:pt-64">
+    <div class="flex justify-center h-32"><img src="./images/question-mark-animation.gif" alt="problem image"></div>
+    <hr class="bg-white mb-7 mt-7
+    ">
+    <div class="flex justify-center flex-col ml-72 mr-64 border-black border-4 p-5 rounded-lg mb-10 bg-orange-400 max-sm:mr-0 max-sm:ml-0 max-sm:mr-3 max-sm:ml-3 ">
+        
+        <div class="chat chat-start">
+            <div class="chat-bubble">
+                What is the Document Object Model (DOM)?
+            </div>
+            <br>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble">
+                <img src="./images/Document.jpg" alt="">
+                <br>
+                <em>The Document Object Model (DOM)</em> is a programming interface for web documents. It represents the structure of a webpage as a tree of objects, where each element (like headings, paragraphs, and images) becomes a node that can be manipulated using JavaScript. This allows developers to dynamically change the content, structure, and styling of a webpage, enabling interactive and responsive user experiences.</div>
+          </div>
+          <br>
+
+          <div class="chat chat-start">
+            <div class="chat-bubble">
+                How do you select an element from the DOM?
+            </div>
+            <br>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble">
+                <img src="./images/1_ZUa-HtPgJNKl67EFpVp2Kg.png" alt="">
+                <br>
+                To select an element from the DOM, we can use JavaScript methods such as `getElementById`, `getElementsByClassName`, `getElementsByTagName`, `querySelector`, or `querySelectorAll`. For example, `document.getElementById('elementId')` selects an element with a specific ID, while `document.querySelector('.className')` selects the first element matching a CSS selector. These methods allow us to target and manipulate specific elements on a webpage.</div>
+          </div>
+
+          <br>
+
+          <div class="chat chat-start">
+            <div class="chat-bubble">
+                What is event delegation in the context of the DOM, and why is it useful?
+            </div>
+            <br>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble">
+                <img src="./images/event-delegation-in-javascript_Thumbnail.png" alt="">
+                <br>
+                Event delegation in the DOM is a technique where you attach a single event listener to a parent element to manage events triggered by its child elements. Instead of adding individual listeners to each child element, the event is captured as it bubbles up through the DOM, allowing the parent to handle it.
+                <br>
+
+Why it’s useful:
+<br>
+1. Efficiency: Reduces memory usage by minimizing the number of event listeners, especially when dealing with many child elements.
+<br>
+2. Dynamic Elements: Handles events on dynamically added elements without needing to reattach listeners.
+<br>
+3. Simplifies Code: Centralizes event handling, making code cleaner and easier to maintain.
+<br>
+</div>
+          </div>
+
+
+         
+        
+
+          <br>
+
+          <div class="chat chat-start">
+            <div class="chat-bubble">
+                How do you manipulate an element's attributes and styles using the DOM?
+            </div>
+            <br>
+          </div>
+          <div class="chat chat-end">
+            <div class="chat-bubble">
+                <img src="./images/second-660x392.png" alt="">
+                <br>
+                To manipulate an element's attributes and styles using the DOM, we can use methods like `setAttribute()` and properties like `style`. For example, we can change an attribute using `element.setAttribute('attribute', 'value')`, or directly modify styles using 
+                <br>
+                `element.style.property = 'value'`. This allows us dynamically update the appearance or behavior of elements on the page.</div>
+          </div>
+
+
+
+    </div>
+
+   </main>
+
+   <footer class="bg-black p-4 pb-11">
+    <p class="text-orange-500 font-bold text-center">
+        &copy; All rights reserved Donate Bangladesh
+    </p>
+</footer>
+
+ <script src="./Script/script.js"></script>   
+</body>
+</html>
