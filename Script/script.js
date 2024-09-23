@@ -3,7 +3,7 @@ const history = document.getElementById('Donation').addEventListener('click',fun
     document.getElementById('History-section').style.display='none';
 
     
-    document.getElementById('Donation').classList.add('bg-orange-600', 'text-white');
+    document.getElementById('Donation').classList.add('bg-orange-600', '!text-white');
     document.getElementById('Donation').classList.remove('btn-outline', 'text-orange-600');
 
     document.getElementById('History').classList.remove('bg-orange-600', 'text-white');
