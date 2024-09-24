@@ -30,7 +30,8 @@ window.onload = function() {
     document.getElementById('Donation').click();
 };
 
-
+// Reusable function created by the developer
+// Reusable function created by the developer
 function check_input_field(inputId) { // Reusable function created by the developer
     const inputField = document.getElementById(inputId);
     const value = inputField.value.trim(); 
@@ -47,6 +48,8 @@ function check_input_field(inputId) { // Reusable function created by the develo
 
     return true; 
 }
+// Reusable function created by the developer
+// Reusable function created by the developer
 
 
 document.getElementById('donateButton1').addEventListener('click', function(event) {
@@ -74,7 +77,7 @@ document.getElementById('donateButton1').addEventListener('click', function(even
         document.getElementById('current_balance').innerText = newB;
         const newF = noakhali_balanceConv + addmoneyInputConv;
         document.getElementById('noakhali').innerText = newF;
-        alert('Thank you for your donations!');
+        document.getElementById('my_modal_1').showModal();
        
   const currentDate = new Date();
  
@@ -117,8 +120,8 @@ document.getElementById('donateButton2').addEventListener('click', function(even
         document.getElementById('current_balance').innerText = newB;
         const newF = feni_balanceConv + addmoneyInputConv;
         document.getElementById('feni').innerText = newF;
-        alert('Thank you for your donations!');
-       
+        document.getElementById('my_modal_1').showModal();
+
   const currentDate = new Date();
  
   const formattedDate = currentDate.toLocaleString(); 
@@ -164,7 +167,7 @@ document.getElementById('donateButton').addEventListener('click', function(event
        document.getElementById('current_balance').innerText = newB;
        const newF = feni_balanceConv + addmoneyInputConv;
        document.getElementById('Quota').innerText = newF;
-       alert('Thank you for your donations!');
+       document.getElementById('my_modal_1').showModal();
       
  const currentDate = new Date();
 

@@ -45,21 +45,7 @@
      
                
             </nav>
-            <!-- <div class="flex justify-center items-center w-full mt-72 gradient-bg">
-                <button class="btn btn-outline btn-success w-64 border-orange-600 !text-orange-600" id="Donation">
-                  <span>Donation</span>
-                </button>
-                <button class="btn btn-outline btn-success w-64 border-orange-600 !text-orange-600 ml-4" id="History">
-                  <span>History</span>
-                </button>
-              </div>
-              
-            </div>
-           
-             -->
-            
-          
-              
+    
             
         </div>
     </header>
@@ -158,6 +144,29 @@
                         class="input input-bordered input-warning w-full max-w-xs mt-6 " />
                         <img src="./images/logo.png" alt="donate" class="h-1/2 mt-5">
                         </div>
+                        <dialog id="my_modal_1" class="modal bg-transparent">
+                            <div class="modal-box bg-white rounded-lg shadow-lg p-6">
+                              <div class="flex-col justify-center text-center">
+                                <div class="flex justify-center items-center mb-4">
+
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                  </svg>
+                                </div>
+                                <h3 class="text-2xl font-semibold text-gray-800">Transaction Successful!</h3>
+                                <p class="py-4 text-gray-600">Thank you for your generous donation. Your support means a lot!</p>
+                                
+                                <div class="modal-action mt-6">
+                                  <form method="dialog">
+                                    <button class="btn bg-orange-400 text-white hover:bg-green-600 focus:outline-none px-6 py-2 rounded-lg">
+                                      Close
+                                    </button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
+                          </dialog>
+                          
     
                         <button  id="donateButton" class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
                         
