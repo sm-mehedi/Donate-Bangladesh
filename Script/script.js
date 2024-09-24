@@ -82,10 +82,16 @@ document.getElementById('donateButton1').addEventListener('click', function(even
   const currentDate = new Date();
  
   const formattedDate = currentDate.toLocaleString(); 
-        const message = document.createElement('p');
-        message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
+  const message = document.createElement('p');
 
-        message.textContent="Thank you For your donation to Noakhali Flood [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+  message.classList.add(
+    'text-3xl', 'font-semibold', 'text-gray-800', 'bg-orange-400', 
+    'border', 'border-orange-500', 'rounded-xl', 'shadow-xl', 
+    'p-8', 'mt-8', 'mb-8', 'max-w-3xl', 'mx-auto', 'text-center', 'leading-relaxed'
+  );
+  
+
+  message.textContent = `We sincerely appreciate your generous donation of ${addmoneyInput} BDT to support the Noakhali Flood relief efforts. Donation made on ${formattedDate}.`;
         document.getElementById('History-section').appendChild(message);    
         document.getElementById('N_input').value="";
     }
@@ -125,10 +131,18 @@ document.getElementById('donateButton2').addEventListener('click', function(even
   const currentDate = new Date();
  
   const formattedDate = currentDate.toLocaleString(); 
-        const message = document.createElement('p');
-        message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
+  const message = document.createElement('p');
 
-        message.textContent="Thank you For your donation to Feni Flood [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+  
+  message.classList.add(
+    'text-3xl', 'font-semibold', 'text-gray-800', 'bg-orange-400', 
+    'border', 'border-orange-500', 'rounded-xl', 'shadow-xl', 
+    'p-8', 'mt-8', 'mb-8', 'max-w-3xl', 'mx-auto', 'text-center', 'leading-relaxed'
+  );
+  
+  
+  message.textContent = `We sincerely appreciate your generous donation of ${addmoneyInput} BDT to support the Feni Flood relief efforts. Donation made on ${formattedDate}.`;
+  
         document.getElementById('History-section').appendChild(message);    
         document.getElementById('F_input').value="";
     }
@@ -172,10 +186,17 @@ document.getElementById('donateButton').addEventListener('click', function(event
  const currentDate = new Date();
 
  const formattedDate = currentDate.toLocaleString(); 
-       const message = document.createElement('p');
-       message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
+ const message = document.createElement('p');
 
-       message.textContent="Thank you For your donation to Quota Movement [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+  
+ message.classList.add(
+   'text-3xl', 'font-semibold', 'text-gray-800', 'bg-orange-400', 
+   'border', 'border-orange-500', 'rounded-xl', 'shadow-xl', 
+   'p-8', 'mt-8', 'mb-8', 'max-w-3xl', 'mx-auto', 'text-center', 'leading-relaxed'
+ );
+ 
+ 
+ message.textContent = `We sincerely appreciate your generous donation of ${addmoneyInput} BDT to support the  Quota Movement relief efforts. Donation made on ${formattedDate}.`;
        document.getElementById('History-section').appendChild(message);    
        document.getElementById('Q_input').value="";
    }
