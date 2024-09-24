@@ -49,20 +49,59 @@ function check_input_field(inputId) { // Reusable function created by the develo
 }
 
 
-document.getElementById('donateButton1').addEventListener('click', function() {
+document.getElementById('donateButton1').addEventListener('click', function(event) {
+
+    event.preventDefault();
+
+   
     const isNValid = check_input_field('N_input');
+    if (!isNValid) {
+        document.getElementById('N_input').value="";
+        return;
+    }
+    const addmoneyInput = document.getElementById('N_input').value;
+     const currentBalance = document.getElementById('current_balance').innerText;
+     const noakhali_balance = document.getElementById('noakhali').innerText;
+     const addmoneyInputConv = parseFloat(addmoneyInput);
+     const currentBalanceConv = parseFloat(currentBalance);
+     const noakhali_balanceConv = parseFloat(noakhali_balance); 
+
    
 
     
-    if (isNValid) {
+    if (isNValid && currentBalanceConv>=0 && currentBalanceConv>=addmoneyInputConv) {
+        const newB = currentBalanceConv - addmoneyInputConv;
+        document.getElementById('current_balance').innerText = newB;
+        const newF = noakhali_balanceConv + addmoneyInputConv;
+        document.getElementById('noakhali').innerText = newF;
         alert('Thank you for your donations!');
+       
+  const currentDate = new Date();
+ 
+  const formattedDate = currentDate.toLocaleString(); 
+        const message = document.createElement('p');
+        message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
+
+        message.textContent="Thank you For your donation to Noakhali Flood [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+        document.getElementById('History-section').appendChild(message);    
+        document.getElementById('N_input').value="";
+    }
+    else{
+        console.log("Insufficient balance");
+        alert("Insufficient balance");
+        document.getElementById('N_input').value="";
+    }
       
     }
-});
+);
 document.getElementById('donateButton2').addEventListener('click', function(event) {
    
      event.preventDefault();
      const isFValid = check_input_field('F_input');
+     if (!isFValid) {
+        document.getElementById('F_input').value="";
+        return;
+    }
      const addmoneyInput = document.getElementById('F_input').value;
      const currentBalance = document.getElementById('current_balance').innerText;
      const feni_balance = document.getElementById('feni').innerText;
@@ -86,7 +125,7 @@ document.getElementById('donateButton2').addEventListener('click', function(even
         const message = document.createElement('p');
         message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
 
-        message.textContent="Thank you For your donation to Feni [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+        message.textContent="Thank you For your donation to Feni Flood [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
         document.getElementById('History-section').appendChild(message);    
         document.getElementById('F_input').value="";
     }
@@ -96,16 +135,50 @@ document.getElementById('donateButton2').addEventListener('click', function(even
         document.getElementById('F_input').value="";
     }
 });
-const button = document.getElementById('my_modal_1');
-    button.disabled = true;
-document.getElementById('my_modal_1').addEventListener('click', function() {
-    
-     const isQValid = check_input_field('Q_input');
+const button = document.getElementById('donateButton');
+   
+document.getElementById('donateButton').addEventListener('click', function(event) {
+    event.preventDefault();
 
     
-    if (isQValid) {
-        button.disabled = 'false';
-        document.getElementById('my_modal_1').showModal();
-       
+     const isQValid = check_input_field('Q_input');
+     if (!isQValid) {
+        document.getElementById('Q_input').value="";
+        return;
     }
+
+
+    
+    const addmoneyInput = document.getElementById('Q_input').value;
+    const currentBalance = document.getElementById('current_balance').innerText;
+    const feni_balance = document.getElementById('Quota').innerText;
+    const addmoneyInputConv = parseFloat(addmoneyInput);
+    const currentBalanceConv = parseFloat(currentBalance);
+    const feni_balanceConv = parseFloat(feni_balance); 
+  
+
+   
+   if (isQValid && currentBalanceConv>=0 && currentBalanceConv>=addmoneyInputConv) {
+      
+       const newB = currentBalanceConv - addmoneyInputConv;
+       document.getElementById('current_balance').innerText = newB;
+       const newF = feni_balanceConv + addmoneyInputConv;
+       document.getElementById('Quota').innerText = newF;
+       alert('Thank you for your donations!');
+      
+ const currentDate = new Date();
+
+ const formattedDate = currentDate.toLocaleString(); 
+       const message = document.createElement('p');
+       message.classList.add('text-4xl', 'text-white', 'bg-orange-500', 'border', 'border-black', 'p-4', 'mt-4', 'mb-4');
+
+       message.textContent="Thank you For your donation to Quota Movement [Amount] "+addmoneyInput+ " BDT at "+formattedDate;
+       document.getElementById('History-section').appendChild(message);    
+       document.getElementById('Q_input').value="";
+   }
+   else{
+       console.log("Insufficient balance");
+       alert("Insufficient balance");
+       document.getElementById('Q_input').value="";
+   }
 });

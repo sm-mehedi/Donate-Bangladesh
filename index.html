@@ -29,7 +29,10 @@
                 <span class="text-white flex justify-center gap-4 text-4xl font-bold mb-6 order-3 mr-10 max-sm:order-2 max-sm:mr-0"><img src="./images/coin.png" alt="Amount" title="current balance" ><span id="current_balance">
                     5500
 
-                </span></span>
+                </span>
+                <span>BDT</span>
+            
+            </span>
     
     
                 <a href="./blog.html"><button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg ml-10 text-white text-2xl bg-orange-500 max-sm:order-3 max-sm:h-12 max-sm:-translate-x-3 ">Blog</button></a>
@@ -84,7 +87,9 @@
                         <img src="./images/noakhali.png" alt="feni flood" class="rounded-md">
                     </div>
                     <div class="flex-col">
-                        <span class="flex gap-3 w-1/3 bg-slate-300 rounded-lg justify-center font-black"><img src="./images/coin.png" alt="amount">0 BDT</span>
+                        <span class="flex gap-3 w-1/3 bg-slate-300 rounded-lg justify-center font-black"><img src="./images/coin.png" alt="amount"><span id="noakhali">
+                            0 BDT
+                        </span></span>
                         <br>
                         <span class="font-black text-xl">Donate for Flood at Noakhali, Bangladesh</span>
                         <br>
@@ -141,7 +146,7 @@
                         <img src="./images/quota-protest.png" alt="feni flood" class="rounded-md">
                     </div>
                     <div class="flex-col">
-                        <span class="flex gap-3 w-1/3 bg-slate-300 rounded-lg justify-center font-black"><img src="./images/coin.png" alt="amount">2400 BDT</span>
+                        <span class="flex gap-3 w-1/3 bg-slate-300 rounded-lg justify-center font-black"><img src="./images/coin.png" alt="amount"><span id="Quota">2400 BDT</span></span>
                         <br>
                         <span class="font-black text-xl">Aid for Injured in the Quota Movement</span>
                         <br>
@@ -155,19 +160,7 @@
                         </div>
     
                         <button  id="donateButton" class="btn btn-wide w-100 mt-7 bg-orange-400 text-2xl font-light  text-white">Donate Now</button>
-                        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-<dialog id="my_modal_1"  class="modal">
-  <div class="modal-box">
-    <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+                        
                         
                     </div>
                 </div>
@@ -176,7 +169,15 @@
 
 
         <div id="History-section">
-            <!-- Open the modal using ID.showModal() method -->
+            <div class="mt-5 flex justify-center bg-orange-400 mb-5 max-sm:flex-col ">
+              
+                <span class="text-4xl text-white p-4 font-mono">
+                    
+                    Transaction History
+                </span>
+
+            </div>
+            
              
 
         </div>
